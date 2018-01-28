@@ -20,6 +20,23 @@ The watcher keeps track of already downloaded tracks via a JSON encoded database
 
 The only public method `checkPodcastTracks` needs the podcast id and the languages which are to be checked. If a file is to be downloaded the given file name in the track's media url is used as the target file name. **IMPORTANT**: It is assumed that the given file names are unique! Otherwise files might be overwritten!
 
+# Requirements
+
+The API classs uses the *pip* package `requests`.
+
+Best create a virtual environment and activate it:
+
+~~~bash
+$ pyvenv .venv
+$ . .venv/bin/activate
+~~~
+
+In any case install the requirements:
+
+~~~bash
+$ pip -r requirements.txt
+~~~
+
 # Configuration
 
 To use the watcher the program first needs to instantiate a `MinimalBmmApi` instance which needs the url to the BMM API. Further this instance needs to authenticate, which requires above mentioned credentials.
